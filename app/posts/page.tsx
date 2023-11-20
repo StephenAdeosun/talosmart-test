@@ -28,7 +28,3 @@ const Posts: React.FC = () => {
 
 export default Posts;
 
-
-
-
-
