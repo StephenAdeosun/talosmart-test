@@ -15,9 +15,8 @@ const Posts: React.FC = () => {
             <Link href="/create-post"className="text-white">
               Create Post
             </Link>
-           
+          
 
-           
           </div>
         </div>
       </nav>
