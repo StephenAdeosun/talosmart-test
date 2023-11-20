@@ -16,6 +16,7 @@ const Posts: React.FC = () => {
               Create Post
             </Link>
            
+           
           </div>
         </div>
       </nav>
