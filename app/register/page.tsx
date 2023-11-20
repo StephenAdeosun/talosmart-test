@@ -10,12 +10,11 @@ const RegisterPage: NextPage = () => {
   // Callback to execute on successful registration
   const handleRegisterSuccess = () => {
     // Redirect to the login page after successful registration
-    // router.push('/login');
+    router.push('/login');
   };
 
   return (
-    <div>
-      <h1>Sign Up</h1>
+     <div className=" bg-gray-100 pt-16  h-screen ">
       <RegistrationForm onRegisterSuccess={handleRegisterSuccess} />
     </div>
   );

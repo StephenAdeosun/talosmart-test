@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import PostForm from '@/components/CreatePost';
 import { useRouter } from 'next/navigation';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const CreatePostPage: React.FC = () => {
   const [postCreated, setPostCreated] = useState(false);
@@ -10,19 +12,18 @@ const CreatePostPage: React.FC = () => {
 
   const handleCreatePostSuccess = () => {
     setPostCreated(true);
+    toast.success('Post created successfully!');
     // Redirect to the posts page or wherever you want after creating a post
     // For example, redirecting to the posts page:
-    // router.push('/posts');
+    router.push('/dashboard');
   };
 
   return (
     <div>
-      <h1>Create Post</h1>
-      {postCreated ? (
-        <p>Post created successfully!</p>
-      ) : (
+      
+        <ToastContainer />
+
         <PostForm onCreatePostSuccess={handleCreatePostSuccess} />
-      )}
     </div>
   );
 };
