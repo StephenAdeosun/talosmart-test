@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation'; // Updated import
 import { getPostsByUser } from '../services/api';
-
+import Image from 'next/image';
 interface Post {
   username: string;
   base64str: string | null;
@@ -43,7 +43,7 @@ const PostsPage: React.FC = () => {
             <h2 className="text-xl font-semibold mb-2">{post.post}</h2>
             <p className="text-gray-600 mb-4">{post.username}</p>
             {post.base64str && (
-              <img src={`data:image/png;base64,${post.base64str}`} alt="Post Image" className="mb-4" />
+              <Image src={`data:image/png;base64,${post.base64str}`} alt="Post Image" height={100} width={100} className="mb-4" />
             )}
             <p className="text-gray-500">{post.created_at}</p>
           </div>

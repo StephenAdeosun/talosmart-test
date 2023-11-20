@@ -15,7 +15,7 @@ const CreatePostPage: React.FC = () => {
     toast.success('Post created successfully!');
     // Redirect to the posts page or wherever you want after creating a post
     // For example, redirecting to the posts page:
-    router.push('/posts?username=james_hall@gmail.com');
+    router.push('/posts');
   };
 
   return (
