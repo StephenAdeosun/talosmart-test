@@ -17,7 +17,7 @@ const PostForm: React.FC<{ onCreatePostSuccess: () => void }> = ({ onCreatePostS
       username: Yup.string().required('Username is required'),
       postText: Yup.string().required('Post Text is required'),
       image: Yup.mixed()
-      // .required('Image is required')
+      .required('Image is required')
       .test('fileSize', 'File size too large', (value) => {
         if (!value) return false;
         return (value as File).size <= MAX_IMAGE_SIZE_MB * 1024 * 1024;
