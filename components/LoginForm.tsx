@@ -107,13 +107,14 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLoginSuccess }) => {
         >
           {loading ? (
             <svg
-              className="animate-spin h-5 w-5 mr-3 border-t-2 border-b-2 border-white"
+              className="animate-spin h-5 w-5 border-t-2 border-b-2 border-white"
               viewBox="0 0 24 24"
             ></svg>
           ) : null}
           {loading ? '' : 'Login'}
         </button>
       </form>
+      
       <div className="text-center mt-4">
           <p>Don't have an account?</p>
           <Link href="/register" className="text-blue-500 underline">
