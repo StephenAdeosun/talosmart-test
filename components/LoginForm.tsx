@@ -114,7 +114,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLoginSuccess }) => {
           {loading ? '' : 'Login'}
         </button>
       </form>
-      
+
       <div className="text-center mt-4">
           <p>Don't have an account?</p>
           <Link href="/register" className="text-blue-500 underline">
@@ -128,3 +128,4 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLoginSuccess }) => {
 };
 
 export default LoginForm;
+
